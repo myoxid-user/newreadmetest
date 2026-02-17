@@ -48,7 +48,7 @@ export function Navbar() {
             <Command className="h-4 w-4" />
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="/resume.pdf" download title="Download CV">
+            <a href="./resume.pdf" download title="Download CV">
               <FileDown className="h-4 w-4" />
             </a>
           </Button>
@@ -100,7 +100,7 @@ export function Navbar() {
                   {l.label}
                 </button>
               ))}
-              <a href="/resume.pdf" download className="flex items-center gap-2 py-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary">
+              <a href="./resume.pdf" download className="flex items-center gap-2 py-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary">
                 <FileDown className="h-4 w-4" /> {t(translations.hero.downloadCv)}
               </a>
             </div>

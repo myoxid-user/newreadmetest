@@ -76,7 +76,7 @@ export function Hero() {
             </a>
           </Button>
           <Button asChild className="gap-2 font-mono">
-            <a href="/resume.pdf" download>
+            <a href="./resume.pdf" download>
               <FileDown className="h-4 w-4" /> {t(translations.hero.downloadCv)}
             </a>
           </Button>

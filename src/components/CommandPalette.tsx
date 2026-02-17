@@ -62,7 +62,7 @@ export function CommandPalette() {
   const downloadCV = () => {
     setOpen(false);
     const a = document.createElement("a");
-    a.href = "/resume.pdf";
+    a.href = "./resume.pdf";
     a.download = "resume.pdf";
     a.click();
   };
