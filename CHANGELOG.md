@@ -11,3 +11,4 @@
 - Resume: getResumeUrl() in utils for base-aware resume URL; Ali_Khalili_Resume_EN.pdf copied to public/resume.pdf.
 - BootSequence: CORE line shows actual site host (window.location.host) instead of ali.khalili.dev.
 - README: add "Resume PDF" section so public/resume.pdf is committed and deployed for Download CV / direct URL.
+- README: add troubleshooting for blank page (Pages Source) and broken Download CV (resume.pdf missing).

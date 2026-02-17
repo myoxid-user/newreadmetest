@@ -39,6 +39,14 @@ git push origin main
 
 After the next deploy, the link and direct URL will work.
 
+### If the site is blank or Download CV fails
+
+1. **Blank page / console 404 for `/src/main.tsx`**  
+   Pages is still serving the repo source. In the repo **Settings → Pages → Build and deployment → Source** choose **GitHub Actions**, then push any commit so the workflow runs and deploys `dist/`.
+
+2. **Download CV opens or saves a broken file (e.g. `resume.htm`)**  
+   `resume.pdf` is not on the server. Ensure `public/resume.pdf` exists and is committed and pushed; after the next deploy, `https://<user>.github.io/<repo>/resume.pdf` and the Download CV button will work.
+
 ## Stack
 
 - Vite, TypeScript, React
