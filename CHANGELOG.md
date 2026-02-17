@@ -8,3 +8,6 @@
 - Workflow: use `npm install` (not `npm ci`) and add Verify dist step for CI logs.
 - Removed all Lovable branding: README, index meta, author; og/twitter image now local (placeholder.svg); dropped lovable-tagger from Vite and package.json.
 - Fixed GitHub Pages links: resume PDF and 404 home link use relative/base-aware paths (./resume.pdf, Link to="/").
+- Resume: getResumeUrl() in utils for base-aware resume URL; Ali_Khalili_Resume_EN.pdf copied to public/resume.pdf.
+- BootSequence: CORE line shows actual site host (window.location.host) instead of ali.khalili.dev.
+- README: add "Resume PDF" section so public/resume.pdf is committed and deployed for Download CV / direct URL.

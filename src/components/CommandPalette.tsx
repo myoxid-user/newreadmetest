@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { toast } from "sonner";
 import { profile } from "@/data/resume-data";
+import { getResumeUrl } from "@/lib/utils";
 import {
   CommandDialog,
   CommandEmpty,
@@ -62,7 +63,7 @@ export function CommandPalette() {
   const downloadCV = () => {
     setOpen(false);
     const a = document.createElement("a");
-    a.href = "./resume.pdf";
+    a.href = getResumeUrl();
     a.download = "resume.pdf";
     a.click();
   };

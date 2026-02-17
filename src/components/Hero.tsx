@@ -6,6 +6,7 @@ import { TypewriterText } from "@/components/TypewriterText";
 import { CountUp } from "@/components/CountUp";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
+import { getResumeUrl } from "@/lib/utils";
 
 const container = {
   hidden: {},
@@ -76,7 +77,7 @@ export function Hero() {
             </a>
           </Button>
           <Button asChild className="gap-2 font-mono">
-            <a href="./resume.pdf" download>
+            <a href={getResumeUrl()} download>
               <FileDown className="h-4 w-4" /> {t(translations.hero.downloadCv)}
             </a>
           </Button>

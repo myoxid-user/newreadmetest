@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { Moon, Sun, Menu, X, FileDown, Command, Languages } from "lucide-react";
-import { useTheme } from "next-themes";
-import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { translations } from "@/i18n/translations";
+import { AnimatePresence, motion } from "framer-motion";
+import { getResumeUrl } from "@/lib/utils";
+import { Command, FileDown, Languages, Menu, Moon, Sun, X } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useState } from "react";
 
 export function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -34,7 +35,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/30 bg-background/50 backdrop-blur-xl supports-[backdrop-filter]:bg-background/30">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <button onClick={() => scrollTo("#hero")} className="font-mono text-lg font-bold tracking-wider text-foreground">
-          AK<span className="text-primary">.</span>
+          AliKhalili<span className="text-primary">.</span>
         </button>
 
         {/* Desktop */}
@@ -48,7 +49,7 @@ export function Navbar() {
             <Command className="h-4 w-4" />
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="./resume.pdf" download title="Download CV">
+            <a href={getResumeUrl()} download title="Download CV">
               <FileDown className="h-4 w-4" />
             </a>
           </Button>
@@ -100,7 +101,7 @@ export function Navbar() {
                   {l.label}
                 </button>
               ))}
-              <a href="./resume.pdf" download className="flex items-center gap-2 py-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary">
+              <a href={getResumeUrl()} download className="flex items-center gap-2 py-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary">
                 <FileDown className="h-4 w-4" /> {t(translations.hero.downloadCv)}
               </a>
             </div>
